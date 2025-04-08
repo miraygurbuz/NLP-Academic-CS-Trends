@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.so
+*.DS_Store
+*.swp
+*.swo
+*.sublime-workspace
+.ipynb_checkpoints/
+venv/
+env/
+.venv/
+.vscode/
+.idea/
+logs/
+*.log
+data/
+notebooks/
