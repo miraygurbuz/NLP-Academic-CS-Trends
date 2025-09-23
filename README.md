@@ -1,6 +1,6 @@
-# 📖 NLP Academic CS Trends
+# Computer Science Research Trends (2020–2025)
 
-This project collects academic papers from [arXiv.org](https://arxiv.org/) over the past 5 years and applies text preprocessing to analyze trends in computer science research.
+Academic papers in computer science from [arXiv.org](https://arxiv.org/) were collected, preprocessed, and analyzed through topic modeling with BERTopic, Top2Vec, FASTopic, CombinedTM, and ZeroShotTM to identify research trends.
 
 ## Setup
 
@@ -142,7 +142,37 @@ The preprocessing module performs the following operations:
     - `main.py`: Entry point script
     - `preprocessing.py`: Core text processing functions
     - `config.py`: Configuration parameters and stopwords
-   
+
+## Results
+
+| Metric | BERTopic | Top2Vec | FASTopic | CombinedTM | ZeroShotTM |
+|--------|----------|---------|----------|------------|------------|
+| C_v Coherence | 0.7625 | 0.6937 | 0.5601 | 0.6116 | 0.6223 |
+| U_Mass Coherence | -2.2975 | -3.5214 | -3.6915 | -2.3955 | -2.2460 |
+| NPMI Coherence | 0.1865 | 0.1625 | 0.0190 | 0.0735 | 0.0910 |
+| UCI Coherence | 1.7352 | 0.5529 | -0.9888 | 0.3238 | 0.7254 |
+
+### BERTopic Results
+
+* **Embedding Model:** paraphrase-mpnet-base-v2
+
+#### Growing Topics from 2020 to 2025
+
+<img width="1250" height="450" alt="growing" src="https://github.com/user-attachments/assets/9508d803-9c17-4cba-ba41-a1efaf06aa7b" />
+
+
+| Topic ID | Description | Keywords |
+|----------|-|-|
+| 5        | Diffusion-Based Image & Video Generation | diffusion, diffusion model, image, edit, generation, style, texttoimage, model, video, image generation |
+| 21       | Reasoning & Prompting in LLMs|reason, llm, language model, prompt, language, large language, cot, reason task, answer, model llm| 
+| 19       | Multimodal Question Answering (VQA) |visual, mllms, vlms, visionlanguage, vqa, multimodal, reason, token, answer, question|
+| 54       | 3D Rendering via Gaussian Splatting|gaussian, splatting, gaussian splatting, dg, render, scene, gaussians, reconstruction, view, splatting dg|
+| 18       | Code Generation & Software Debugging |code, bug, program, software, code generation, test, llm, developer, language, generation|
+| 35       | Retrieval-Augmented Generation (RAG) |retrieval, rag, query, document, search, retrievalaugmented, llm, retrieve, retriever, answer|
+| 36       | Video Understanding & Captioning |video, temporal, caption, moment, video understand, video caption, long video, understand, retrieval, videotext|
+| 91       | Human Motion Synthesis & Animation  |motion, human motion, motion generation, human, generation, motion synthesis, animation, diffusion, motion sequence, video|
+| 64       | Vision Transformers (ViTs) |vision transformer, transformer, vits, vit, vision, token, attention, transformer vits, image, patch|
+| 113      | Parameter-Efficient Fine-Tuning (LoRA, PEFT) |finetuning, lora, peft, lowrank, parameter, parameterefficient, lowrank adaptation, adapter, parameterefficient finetuning, adaptation|
 ## Data Source
 
 This project uses data from [arXiv.org](https://arxiv.org/), an open-access repository of electronic preprints for scientific papers.
